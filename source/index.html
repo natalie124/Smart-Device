@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/roboto-condensed-v18-cyrillic-ext-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-condensed-v18-cyrillic-ext-700.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-v20-cyrillic-ext_latin-500.woff2" as="font">
+  <link rel="preload" href="fonts/pt-mono-v7-cyrillic-ext-regular.woff2" as="font">
+  <script>
+    document.createElement("picture");
+  </script>
 </head>
-<body>
 
+<body>
+  <div style="display:none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <header class="page-header">
+    <div class="page-header__info">
+      <div class="page-header__nav">
+        <div class="page-header__logo">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-m@1x.png 1x, img/logo-m@2x.png 2x">
+            <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип Smart Device">
+          </picture>
+        </div>
+        <button class="page-header__nav-btn" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <div class="page-header__contacts header-contacts">
+        <div class="header-contacts__wrapper">
+          <h2 class="visually-hidden">Наши контакты:</h2>
+          <a class="header-contacts__link header-contacts__link--mail" href="mailto:info@sd.ru">
+            <span>info@sd.ru</span>
+          </a>
+          <a class="header-contacts__link header-contacts__link--phone" href="tel:+7495005252">
+            <span>+7 (495) 000 52 52</span>
+          </a>
+        </div>
+        <button class="header-contacts__btn" type="button">Заказать звонок</button>
+      </div>
+    </div>
+    <section class="page-header__intro intro">
+      <h2 class="intro__title">Печатные платы</h2>
+      <p class="intro__text">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+      <a href="#" class="intro__btn">
+        <span class="intro__btn-long">Получить бесплатную консультацию</span>
+        <span class="intro__btn-short">Бесплатная консультация</span>
+      </a>
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/circuit-m@1x.png 1x, img/circuit-m@2x.png 2x">
+        <source media="(max-width: 1023px)" srcset="img/circuit-t@1x.png 1x, img/circuit-t@2x.png 2x">
+        <img src="img/circuit-d@1x.png" srcset="img/circuit-d@2x.png 2x" alt="Печатные платы">
+      </picture>
+      <a href="#" class="intro__scroll">Скролл вниз</a>
+    </section>
+  </header>
 </body>
+
 </html>
