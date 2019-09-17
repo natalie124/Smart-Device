@@ -67,6 +67,14 @@
   text-decoration: none;
 }
 
+.intro__btn:hover,
+.intro__btn:focus {
+  color: $blue;
+
+  background-color: $white;
+  transition-duration: 0.5s;
+}
+
 .intro__btn-short {
   display: none;
 }
@@ -90,6 +98,15 @@
 
   opacity: 0.5;
   transform: rotate(-90deg);
+}
+
+.intro__scroll:hover,
+.intro__scroll:focus {
+  opacity: 1;
+}
+
+.intro__scroll:active {
+  opacity: 0.2;
 }
 
 @media (max-width: $tablet-width) {
