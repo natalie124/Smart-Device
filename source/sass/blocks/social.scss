@@ -26,7 +26,7 @@
 }
 
 .social__item:hover .social__icon,
-.social__item:focus .social__icon {
+.social__link:focus .social__icon {
   fill: $blue;
   transition-duration: 0.3s;
 }
@@ -34,4 +34,18 @@
 .social__item:active .social__icon {
   fill: #000000;
   transition-duration: 0.3s;
+}
+
+@media (max-width: $tablet-width) {
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 97px;
+    padding: 0 9px 5px 24px;
+
+    border-bottom: 1px solid rgba(98, 105, 98, 0.2);
+  }
 }

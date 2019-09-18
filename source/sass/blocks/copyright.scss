@@ -40,3 +40,47 @@
   color: $dark-grey;
   opacity: 0.5;
 }
+
+.copyright__link {
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.copyright__link:hover .copyright__text,
+.copyright__link:focus .copyright__text {
+  color: $blue;
+
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+.copyright__link:active .copyright__text {
+  color: #000000;
+
+  transition-duration: 0.3s;
+}
+
+@media (max-width: $tablet-width) {
+  .copyright__text {
+    &--hidden {
+      padding: 0;
+      font-size: 0;
+    }
+    &--top {
+      position: absolute;
+      top: 22px;
+      left: 42.3%;
+    }
+  }
+  .copyright__container {
+    &--left {
+      width: 0;
+      padding: 0;
+    }
+    &--right {
+      width: 100%;
+      padding: 7px 27px;
+    }
+  }
+}
