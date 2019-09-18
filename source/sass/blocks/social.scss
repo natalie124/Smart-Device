@@ -49,3 +49,18 @@
     border-bottom: 1px solid rgba(98, 105, 98, 0.2);
   }
 }
+
+@media (max-width: $mobile-width) {
+  .social {
+    flex-direction: column;
+
+    min-height: 261px;
+    padding: 46px 20px 54px;
+
+    border-bottom: none;
+  }
+
+  .social__list {
+    padding-left: 15px;
+  }
+}
