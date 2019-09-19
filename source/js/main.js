@@ -1,5 +1,5 @@
 'use strict';
-(function() {
+(function () {
   var Selector = {
     FOOTER: {
       DROPDOWN: {
@@ -26,22 +26,24 @@
    */
   function addСlasses(selectors, className) {
     for (var selector in selectors) {
-      document.querySelector(selectors[selector])
-        .classList.add(className);
+      if (selectors.hasOwnProperty(selector)) {
+        document.querySelector(selectors[selector])
+            .classList.add(className);
+      }
     }
-  };
+  }
   /**
    * добавляет переключение выпадающих списков  подвале
    *
    */
   function addFooterDropdownToggle() {
     var dropdownTitles = document.querySelectorAll(Selector.FOOTER.DROPDOWN_TITLE);
-    dropdownTitles.forEach(function(dropdownTitle) {
-      dropdownTitle.addEventListener('click', function() {
+    dropdownTitles.forEach(function (dropdownTitle) {
+      dropdownTitle.addEventListener('click', function () {
         dropdownTitle.parentNode.classList.toggle(ClassName.CLOSE_FOOTER_DROPDOWN);
       });
     });
-  };
+  }
   /**
    * обрезает текст до определенного числа символов и добавляет '..' в конце
    * @param {string} selector css селектор элемента, который обрезаем
@@ -55,7 +57,7 @@
       var crupText = text.reverse().splice(-number).reverse().join('') + '..';
       textBox.textContent = crupText;
     }
-  };
+  }
 
   addСlasses(Selector.FOOTER.DROPDOWN, ClassName.CLOSE_FOOTER_DROPDOWN); // добавляет класс, скрывающий списки в подвале
   addFooterDropdownToggle(); // добавляет переключение выпадающих списков  подвале

@@ -96,8 +96,8 @@
   line-height: 30px;
   font-weight: 400;
   color: $white;
-
 }
+
 .service__img {
   position: absolute;
   top: 0;
@@ -109,8 +109,8 @@
 
 .service__item:hover,
 .service__item:focus {
-   background-color: $blue;
-   transition-duration: 0.5s;
+  background-color: $blue;
+  transition-duration: 0.5s;
 }
 
 .service__item:hover .service__link::before,
@@ -132,12 +132,12 @@
 }
 
 .service__item:active .service__img {
-   opacity: 1;
-   transition-duration: 0.5s;
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 
 .service__item:active .service__title {
-   color: #000000;
+  color: #000000;
 }
 
 .service__item:active .service__link::before {
@@ -171,8 +171,10 @@
     min-height: 255px;
     margin-bottom: 46px;
   }
+
   .service__title {
     margin: 40px 0 0 45px;
+
     &--parts {
       margin-top: 51px;
     }
@@ -199,9 +201,9 @@
 
   .service__title {
     margin: 20px 0 0 35px;
+
     &--parts {
       margin-top: 28px;
     }
   }
 }
-
