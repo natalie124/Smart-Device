@@ -49,10 +49,12 @@
    *
    */
   function truncatesText(selector, number) {
-    var textBox = document.querySelector(selector);
-    var text = textBox.textContent.split('');
-    var crupText = text.reverse().splice(-number).reverse().join('') + '..';
-    textBox.textContent = crupText;
+    if (screen.width < 1024) {
+      var textBox = document.querySelector(selector);
+      var text = textBox.textContent.split('');
+      var crupText = text.reverse().splice(-number).reverse().join('') + '..';
+      textBox.textContent = crupText;
+    }
   };
 
   addСlasses(Selector.FOOTER.DROPDOWN, ClassName.CLOSE_FOOTER_DROPDOWN); // добавляет класс, скрывающий списки в подвале

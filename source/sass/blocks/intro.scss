@@ -75,6 +75,10 @@
   transition-duration: 0.5s;
 }
 
+.intro__btn:active {
+  opacity: 0.5;
+}
+
 .intro__btn-short {
   display: none;
 }

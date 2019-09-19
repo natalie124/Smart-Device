@@ -65,6 +65,17 @@
   border-radius: 5px;
 }
 
+.about-company__btn:hover,
+.about-company__btn:focus {
+  background-color: $blue;
+  color: $white;
+  transition-duration: 0.3s;
+}
+
+.about-company__btn:active {
+  opacity: 0.5;
+}
+
 @media (max-width: $tablet-width) {
   .about-company__wrapper {
     max-width: 1023px;
