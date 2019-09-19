@@ -5,7 +5,6 @@
 .advantages__wrapper {
   max-width: 1250px;
   padding: 0 40px;
-  margin: 0 auto;
 }
 
 .advantages__list {
@@ -84,11 +83,7 @@
 
 @media (max-width: $tablet-width) {
   .advantages__wrapper {
-    width: 100%;
-    max-width: 1023px;
-    min-width: 320px;
     padding: 0 25px;
-    margin: 0;
   }
 
   .advantages__item {
@@ -109,7 +104,6 @@
 
 @media (max-width: $mobile-width) {
   .advantages__wrapper {
-    max-width: 767px;
     padding: 0 14px;
   }
 

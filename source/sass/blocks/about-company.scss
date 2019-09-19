@@ -7,7 +7,6 @@
 
   max-width: 1250px;
   padding: 0 42px 0 220px;
-  margin: 0 auto;
 }
 
 .about-company__wrapper::before {
@@ -78,12 +77,8 @@
 
 @media (max-width: $tablet-width) {
   .about-company__wrapper {
-    max-width: 1023px;
-    min-width: 320px;
-    width: 100%;
     padding-left: 212px;
     padding-right: 21px;
-    margin: 0;
   }
 
   .about-company__title {

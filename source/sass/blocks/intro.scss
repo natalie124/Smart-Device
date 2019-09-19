@@ -7,10 +7,7 @@
   align-items: flex-start;
 
   max-width: 1461px;
-  min-width: 1024px;
-  width: 100%;
   padding: 0 20px;
-  margin: 0 auto;
 }
 
 .intro__title {
@@ -26,19 +23,24 @@
   text-transform: uppercase;
 }
 
-.intro__text {
+.intro__container {
   position: relative;
 
-  width: 51%;
-  padding: 0 0 0 94px;
-  margin: 0 0 41px 0;
+  width: 100%;
+  padding-left: 94px;
+}
+
+.intro__text {
+  width: 52%;
+  padding: 0;
+  margin: 0 0 58px 0;
 
   font-size: 22px;
   line-height: 34px;
   text-transform: lowercase;
 }
 
-.intro__text::before {
+.intro__container::before {
   position: absolute;
   left: 0;
   top: 15px;
@@ -52,7 +54,6 @@
 
 .intro__btn {
   padding: 18px 45px;
-  margin-left: 98px;
 
   font-family: $roboto-condensed;
   font-size: 16px;
@@ -85,14 +86,16 @@
 
 .intro img {
   position: absolute;
-  top: -201px;
-  right: -52px;
+  top: -323px;
+  right: -71px;
 
-  width: 49%;
+  width: 50%;
 }
 
 .intro__scroll {
-  margin: 133px 0 0 -37px;
+  position: absolute;
+  bottom: -165px;
+  left: -17px;
 
   font-family: $pt-mono;
   font-size: 14px;
@@ -115,9 +118,6 @@
 
 @media (max-width: $tablet-width) {
   .intro {
-    min-width: 320px;
-    max-width: 1023px;
-    width: 100%;
     padding: 20px 88px 0;
   }
 
@@ -129,16 +129,21 @@
     letter-spacing: 4px;
   }
 
+  .intro__container {
+    padding-left: 32px;
+  }
+
   .intro__text {
-    width: 70%;
-    padding-left: 52px;
-    margin-bottom: 53px;
+    width: 60%;
+    min-width: 510px;
+    margin-bottom: 69px;
+    padding-left: 20px;
 
     font-size: 18px;
     line-height: 28.22px;
   }
 
-  .intro__text::before {
+  .intro__container::before {
     top: 14px;
     left: 3px;
     width: 33px;
@@ -147,7 +152,7 @@
   .intro__btn {
     padding-left: 32px;
     padding-right: 32px;
-    margin-left: 50px;
+    margin-left: 19px;
 
     font-size: 16px;
     line-height: 18.75px;
@@ -155,10 +160,10 @@
 
   .intro img {
     position: absolute;
-    top: -201px;
-    right: -208px;
+    top: -387px;
+    right: -290px;
 
-    width: 70%;
+    width: 89%;
   }
 
   .intro__scroll {
@@ -183,8 +188,14 @@
     letter-spacing: 2.5px;
   }
 
+  .intro__container {
+    padding-left: 0;
+  }
+
   .intro__text {
     width: 100%;
+    min-width: 0;
+    padding-left: 51px;
     margin-bottom: 39px;
 
     font-size: 16px;
@@ -192,7 +203,9 @@
   }
 
   .intro__btn {
-    margin-left: 3px;
+    display: block;
+    margin-left: 2px;
+    text-align: center;
   }
 
   .intro__btn-long {
@@ -204,8 +217,8 @@
   }
 
   .intro img {
-    top: -311px;
-    right: -332px;
+    top: -450px;
+    right: -347px;
 
     width: 625px;
     height: auto;

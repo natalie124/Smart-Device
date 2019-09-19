@@ -9,7 +9,6 @@
 .service__wrapper {
   max-width: 1250px;
   padding: 91px 40px 98px;
-  margin: 0 auto;
 }
 
 .service__list {
@@ -152,11 +151,7 @@
 
 @media (max-width: $tablet-width) {
   .service__wrapper {
-    max-width: 1023px;
-    min-width: 320px;
-    width: 100%;
     padding: 51px 25px 35px;
-    margin: 0;
   }
 
   .service__main-title {
