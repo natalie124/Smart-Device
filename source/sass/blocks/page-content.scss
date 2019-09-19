@@ -4,8 +4,34 @@
   background: url("../img/content-bg@1x.png") no-repeat $white;
 }
 
+.page-content__advantages {
+  margin-bottom: 80px;
+}
+
+.page-content__about-company {
+  margin-bottom: 110px;
+}
+
 @media (max-width: $tablet-width) {
   .page-content {
     background-image: none;
+  }
+
+  .page-content__advantages {
+    margin-bottom: 26px;
+  }
+
+  .page-content__about-company {
+    margin-bottom: 82px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-content__advantages {
+    margin-bottom: 33px;
+  }
+
+  .page-content__about-company {
+    margin-bottom: 64px;
   }
 }
