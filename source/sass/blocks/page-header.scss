@@ -1,7 +1,8 @@
 .page-header {
   width: 100%;
-  min-height: 856px;
+  min-height: 878px;
   padding-bottom: 30px;
+  margin-bottom: 109px;
 
   color: $white;
 
@@ -56,7 +57,8 @@
 
 @media (max-width: $tablet-width) {
   .page-header {
-    min-height: 656px;
+    min-height: 686px;
+    margin-bottom: 54px;
   }
 
   .page-header__info {
@@ -80,6 +82,7 @@
 @media (max-width: $mobile-width) {
   .page-header {
     min-height: 647px;
+    margin-bottom: 37px;
   }
 
   .page-header__info {

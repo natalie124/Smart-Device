@@ -1,0 +1,11 @@
+.page-content {
+  width: 100%;
+
+  background: url("../img/content-bg@1x.png") no-repeat $white;
+}
+
+@media (max-width: $tablet-width) {
+  .page-content {
+    background-image: none;
+  }
+}

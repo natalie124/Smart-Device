@@ -1,0 +1,132 @@
+.advantages {
+  width: 100%;
+}
+
+.advantages__wrapper {
+  max-width: 1250px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.advantages__item {
+  width: 48.7%;
+  min-height: 299px;
+  padding: 59px 41px 49px;
+  margin: 0 0 30px 0;
+
+  border: 1px solid #ebebeb;
+  border-left: 3px solid $blue;
+}
+
+.advantages__icon {
+  position: relative;
+  top: -16px;
+
+  fill: $blue;
+}
+
+.advantages__title {
+  width: 100%;
+  padding: 0;
+  margin: 0 0 15px 0;
+
+  font-family: $roboto-condensed;
+  font-size: 24px;
+  line-height: 33.75px;
+  font-weight: 400;
+  color: $blue;
+}
+
+.advantages__text {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  font-family: $pt-mono;
+  font-size: 16px;
+  line-height: 21.5px;
+  color: $grey;
+}
+
+.advantages__item:hover,
+.advantages__item:focus {
+  background-color: $blue;
+  transition-duration: 0.5s;
+}
+
+.advantages__item:hover .advantages__title,
+.advantages__item:hover .advantages__text,
+.advantages__item:focus .advantages__title,
+.advantages__item:focus .advantages__text {
+  color: $white;
+
+  transition-duration: 0.5s;
+}
+
+.advantages__item:hover .advantages__icon,
+.advantages__item:focus .advantages__icon {
+  fill: $white;
+  transition-duration: 0.5s;
+}
+
+@media (max-width: $tablet-width) {
+  .advantages__wrapper {
+    width: 100%;
+    max-width: 1023px;
+    min-width: 320px;
+    padding: 0 25px;
+    margin: 0;
+  }
+
+  .advantages__item {
+    width: 47.9%;
+    min-height: 232px;
+    padding: 27px 22px;
+    margin-bottom: 29px;
+  }
+
+  .advantages__title {
+    margin-bottom: 10px;
+  }
+
+  .advantages__icon {
+    top: -4px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .advantages__wrapper {
+    max-width: 767px;
+    padding: 0 14px;
+  }
+
+  .advantages__item {
+    width: 100%;
+    padding: 30px 24px;
+    margin-bottom: 21px;
+    &--suppliers {
+      padding: 30px 14px 30px 23px;
+    }
+  }
+
+  .advantages__title {
+    font-size: 20px;
+    line-height: 28.13px;
+  }
+  .advantages__icon {
+    top: -7px;
+  }
+}
