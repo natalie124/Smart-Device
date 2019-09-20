@@ -110,10 +110,14 @@
 .intro__scroll:hover,
 .intro__scroll:focus {
   opacity: 1;
+
+  transition-duration: 0.3s;
 }
 
 .intro__scroll:active {
   opacity: 0.2;
+
+  transition-duration: 0.3s;
 }
 
 @media (max-width: $tablet-width) {
