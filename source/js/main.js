@@ -26,23 +26,28 @@
    */
   function addСlasses(selectors, className) {
     for (var selector in selectors) {
-      if (selectors.hasOwnProperty(selector)) {
+      if (selectors && selectors.hasOwnProperty(selector)) {
         document.querySelector(selectors[selector])
             .classList.add(className);
       }
     }
   }
   /**
-   * добавляет переключение выпадающих списков  подвале
+   * добавляет переключение выпадающих списков
+   * @param {string} selector css селектор элементов
+   * @param {string} className css класс элемента, который переключается
    *
    */
-  function addFooterDropdownToggle() {
-    var dropdownTitles = document.querySelectorAll(Selector.FOOTER.DROPDOWN_TITLE);
-    dropdownTitles.forEach(function (dropdownTitle) {
-      dropdownTitle.addEventListener('click', function () {
-        dropdownTitle.parentNode.classList.toggle(ClassName.CLOSE_FOOTER_DROPDOWN);
+  function addFooterDropdownToggle(selector, className) {
+    if (selector && className) {
+      var dropdownTitles = document.querySelectorAll(selector);
+      dropdownTitles.forEach(function (dropdownTitle) {
+        dropdownTitle.addEventListener('click', function () {
+          dropdownTitle.parentNode.classList.toggle(className);
+        });
       });
-    });
+    }
+
   }
   /**
    * обрезает текст до определенного числа символов и добавляет '..' в конце
@@ -51,7 +56,7 @@
    *
    */
   function truncatesText(selector, number) {
-    if (screen.width < 1024) {
+    if (screen.width < 1024 && selector) {
       var textBox = document.querySelector(selector);
       var text = textBox.textContent.split('');
       var crupText = text.reverse().splice(-number).reverse().join('') + '..';
@@ -60,6 +65,6 @@
   }
 
   addСlasses(Selector.FOOTER.DROPDOWN, ClassName.CLOSE_FOOTER_DROPDOWN); // добавляет класс, скрывающий списки в подвале
-  addFooterDropdownToggle(); // добавляет переключение выпадающих списков  подвале
+  addFooterDropdownToggle(Selector.FOOTER.DROPDOWN_TITLE, ClassName.CLOSE_FOOTER_DROPDOWN); // добавляет переключение выпадающих списков  подвале
   truncatesText(Selector.MAIN.CROP_TEXT, CROP_TEXT_SYMBOL); // обрезает текст до 200 символов
 })();

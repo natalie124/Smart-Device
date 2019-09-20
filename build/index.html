@@ -56,16 +56,16 @@
           <span class="intro__btn-short">Бесплатная консультация</span>
         </a>
         <picture>
-        <source media="(max-width: 767px)" srcset="img/circuit-m@1x.png 1x, img/circuit-m@2x.png 2x">
-        <source media="(max-width: 1023px)" srcset="img/circuit-t@1x.png 1x, img/circuit-t@2x.png 2x">
-        <img src="img/circuit-d@1x.png" srcset="img/circuit-d@2x.png 2x" alt="Печатные платы">
-      </picture>
+          <source media="(max-width: 767px)" srcset="img/circuit-m@1x.png 1x, img/circuit-m@2x.png 2x">
+          <source media="(max-width: 1023px)" srcset="img/circuit-t@1x.png 1x, img/circuit-t@2x.png 2x">
+          <img src="img/circuit-d@1x.png" srcset="img/circuit-d@2x.png 2x" alt="Печатные платы">
+        </picture>
       </div>
       <a href="#anchor" class="intro__scroll">Скролл вниз</a>
     </section>
   </header>
   <main class="page-content">
-    <a href="#" name="anchor"></a>
+    <a href="#" name="anchor" class="visually-hidden" tabindex="-1"></a>
     <section class="page-content__advantages advantages">
       <div class="advantages__wrapper page-container">
         <h2 class="visually-hidden">Наши преимущества:</h2>
@@ -115,8 +115,8 @@
       <div class="service__wrapper  page-container">
         <h2 class="service__main-title">Service Device предлагает следующие товары и услуги</h2>
         <ul class="service__list">
-          <li class="service__item">
-            <a href="#" class="service__link">
+          <li class="service__item" tabindex="0">
+            <a href="#" class="service__link" tabindex="-1">
               <h3 class="service__title">Производство печатных плат</h3>
               <picture>
                 <source media="(max-width: 767px)" srcset="img/production-m@1x.png 1x, img/production-m@2x.png 2x">
@@ -125,8 +125,8 @@
               </picture>
             </a>
           </li>
-          <li class="service__item">
-            <a href="#" class="service__link">
+          <li class="service__item" tabindex="0">
+            <a href="#" class="service__link" tabindex="-1">
               <h3 class="service__title">Монтаж печатных плат</h3>
               <picture>
                 <source media="(max-width: 767px)" srcset="img/installation-m@1x.png 1x, img/installation-m@2x.png 2x">
@@ -135,8 +135,8 @@
               </picture>
             </a>
           </li>
-          <li class="service__item">
-            <a href="#" class="service__link">
+          <li class="service__item" tabindex="0">
+            <a href="#" class="service__link" tabindex="-1">
               <h3 class="service__title service__title--parts">Комплектующие для светотехники</h3>
               <picture>
                 <source media="(max-width: 767px)" srcset="img/parts-m@1x.png 1x, img/parts-m@2x.png 2x">
@@ -148,9 +148,38 @@
         </ul>
       </div>
     </section>
+    <section class="page-content__feedback feedback">
+      <div class="feedback__wrapper page-container">
+        <div class="feedback__container">
+          <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+          <p class="feedback__text">Мы проконсультируем Вас бесплатно</p>
+          <form action="#" method="POST">
+            <div class="feedback__field">
+              <label for="name" class="visually-hidden">Имя</label>
+              <input type="text" name="name" id="name" placeholder="Имя" required="">
+            </div>
+            <div class="feedback__field">
+              <label for="phone" class="visually-hidden">Телефон</label>
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" required="">
+            </div>
+            <div class="feedback__field feedback__field--question">
+              <label for="question" class="visually-hidden">Ваш вопрос</label>
+              <textarea id="question" placeholder="Ваш вопрос" required=""></textarea>
+            </div>
+            <div class="feedback__field feedback__field--btn">
+              <button type="submit">Задать вопрос</button>
+            </div>
+            <div class="feedback__field feedback__field--consent">
+              <input type="checkbox" name="consent" id="consent" tabindex="-1" required="">
+              <label for="consent" tabindex="0">Я согласен на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper  page-container">
+    <div class="page-footer__wrapper page-container">
       <section class="page-footer__social social">
         <div class="page-footer__logo">
           <picture>
