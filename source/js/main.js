@@ -6,7 +6,8 @@
     },
     FOOTER: {
       DROPDOWN: {
-        NAV: '.page-footer__nav'
+        NAV: '.page-footer__nav',
+        CONTACTS: '.page-footer__contacts'
       },
       DROPDOWN_TITLE: '.page-footer__title'
     },
