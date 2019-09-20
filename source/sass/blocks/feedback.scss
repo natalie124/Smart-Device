@@ -240,6 +240,8 @@
   top: 135px;
   left: 50%;
 
+  display: none;
+
   width: 490px;
   padding: 33px 39px 7px;
 
@@ -329,6 +331,10 @@
   border-color: $dark-grey;
   opacity: 0.5;
   transition-duration: 0.3s;
+}
+
+.feedback__popup--open {
+  display: block;
 }
 
 @media (max-width: $tablet-width) {
