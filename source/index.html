@@ -164,7 +164,7 @@
             </div>
             <div class="feedback__field feedback__field--question">
               <label for="question" class="visually-hidden">Ваш вопрос</label>
-              <textarea id="question" placeholder="Ваш вопрос" required></textarea>
+              <textarea id="question" placeholder="Ваш вопрос" name="question" required></textarea>
             </div>
             <div class="feedback__field feedback__field--btn">
               <button type="submit">Задать вопрос</button>
@@ -282,6 +282,38 @@
       </div>
     </div>
   </footer>
+  <section class="feedback__popup">
+    <button class="feedback__close" type="button" tabindex="1">
+      <span class="visually-hidden">Закрыть окно</span>
+      <svg class="advantages__icon" width="17" height="17">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="feedback__title feedback__title--popup">Закажите звонок</h2>
+    <p class="feedback__text feedback__text--popup">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+    <form action="#" method="POST">
+      <div class="feedback__field feedback__field--popup">
+        <label for="popup-name" class="visually-hidden">Имя</label>
+        <input type="text" name="popup--name" id="popup-name" placeholder="Имя" required autofocus>
+      </div>
+      <div class="feedback__field feedback__field--popup">
+        <label for="popup-phone" class="visually-hidden">Телефон</label>
+        <input type="tel" name="popup-phone" id="popup-phone" placeholder="Телефон" required>
+      </div>
+      <div class="feedback__field feedback__field--question feedback__field--popup">
+        <label for="popup-question" class="visually-hidden">Ваш вопрос</label>
+        <textarea id="popup-question" placeholder="Ваш вопрос" name="popup-qiestion" required></textarea>
+      </div>
+      <div class="feedback__field feedback__field--btn feedback__field--popup">
+        <button type="submit">Отправить</button>
+      </div>
+      <div class="feedback__field feedback__field--consent feedback__field--popup">
+        <input type="checkbox" name="popup-consent" id="popup-consent" tabindex="-1" required>
+        <label for="popup-consent" tabindex="0">Я согласен на обработку персональных данных</label>
+      </div>
+    </form>
+  </section>
+  <div class="overlay"></div>
   <script src="js/main.js"></script>
 </body>
 

@@ -234,6 +234,103 @@
   transition-duration: 0.3s;
 }
 
+.feedback__popup {
+  position: fixed;
+  z-index: 4;
+  top: 135px;
+  left: 50%;
+
+  width: 490px;
+  padding: 33px 39px 7px;
+
+  background-color: $blue;
+  transform: translateX(-245px);
+}
+
+.feedback__title--popup {
+  margin-bottom: 12px;
+
+  color: $white;
+
+  font-size: 28px;
+  line-height: 39.4px;
+}
+
+.feedback__text--popup {
+  padding-right: 10px;
+  margin-bottom: 32px;
+
+  color: $white;
+}
+
+.feedback__field--popup {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.feedback__field--popup textarea {
+  min-height: 104px;
+}
+
+.feedback__field--btn.feedback__field--popup {
+  margin-bottom: 27px;
+}
+
+.feedback__field--consent.feedback__field--popup {
+  margin-top: 0;
+  padding-left: 11px;
+  padding-right: 10px;
+}
+
+.feedback__field--consent.feedback__field--popup label::before {
+  top: -1px;
+  left: -18px;
+}
+
+.feedback__field--consent.feedback__field--popup label::after {
+  top: 2px;
+  left: -13px;
+}
+
+.feedback__close {
+  position: absolute;
+  top: 36px;
+  right: 27px;
+
+  width: 17px;
+  height: 17px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.feedback__close:hover,
+.feedback__close:focus {
+  outline: none;
+}
+
+.feedback__close svg {
+  width: 27px;
+  height: 27px;
+  padding: 5px;
+
+  fill: $white;
+  border: 1px solid transparent;
+}
+
+.feedback__close:hover svg,
+.feedback__close:focus svg {
+  border-color: $white;
+  transition-duration: 0.3s;
+}
+
+.feedback__close:active svg {
+  fill: $dark-grey;
+  border-color: $dark-grey;
+  opacity: 0.5;
+  transition-duration: 0.3s;
+}
+
 @media (max-width: $tablet-width) {
   .feedback {
     background-image: none;
