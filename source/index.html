@@ -21,50 +21,55 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
   <header class="page-header">
-    <div class="page-header__info  page-container">
-      <div class="page-header__nav">
-        <div class="page-header__logo">
-          <picture>
-            <source media="(max-width: 767px)" srcset="img/logo-m@1x.png 1x, img/logo-m@2x.png 2x">
-            <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип Smart Device">
-          </picture>
+    <div>
+      <div class="page-header__info  page-container">
+        <div class="page-header__nav">
+          <div class="page-header__logo">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/logo-m@1x.png 1x, img/logo-m@2x.png 2x">
+              <img src="img/logo@1x.png" srcset="img/logo@2x.png 2x" alt="Логотип Smart Device">
+            </picture>
+          </div>
+          <button class="page-header__nav-btn" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
         </div>
-        <button class="page-header__nav-btn" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-      <div class="page-header__contacts header-contacts">
-        <div class="header-contacts__wrapper">
-          <h2 class="visually-hidden">Наши контакты:</h2>
-          <a class="header-contacts__link header-contacts__link--mail" href="mailto:info@sd.ru">
-            <span>info@sd.ru</span>
-          </a>
-          <a class="header-contacts__link header-contacts__link--phone" href="tel:+7495005252">
-            <span>+7 (495) 000 52 52</span>
-          </a>
+        <div class="page-header__contacts header-contacts">
+          <div class="header-contacts__wrapper">
+            <h2 class="visually-hidden">Наши контакты:</h2>
+            <a class="header-contacts__link header-contacts__link--mail" href="mailto:info@sd.ru">
+              <span>info@sd.ru</span>
+            </a>
+            <a class="header-contacts__link header-contacts__link--phone" href="tel:+7495005252">
+              <span>+7 (495) 000 52 52</span>
+            </a>
+          </div>
+          <button class="header-contacts__btn" type="button">Заказать звонок</button>
         </div>
-        <button class="header-contacts__btn" type="button">Заказать звонок</button>
       </div>
-    </div>
-    <section class="page-header__intro intro page-container">
-      <h1 class="intro__title">Печатные платы</h1>
-      <div class="intro__container">
-        <p class="intro__text">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="intro__btn">
-          <span class="intro__btn-long">Получить бесплатную консультацию</span>
-          <span class="intro__btn-short">Бесплатная консультация</span>
-        </a>
+      <section class="page-header__intro intro page-container">
+        <h1 class="intro__title">Печатные платы</h1>
+        <div class="intro__container">
+          <p class="intro__text">Производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <a href="#" class="intro__btn">
+            <span class="intro__btn-long">Получить бесплатную консультацию</span>
+            <span class="intro__btn-short">Бесплатная консультация</span>
+          </a>
+
+        </div>
         <picture>
-          <source media="(max-width: 767px)" srcset="img/circuit-m@1x.png 1x, img/circuit-m@2x.png 2x">
-          <source media="(max-width: 1023px)" srcset="img/circuit-t@1x.png 1x, img/circuit-t@2x.png 2x">
-          <img src="img/circuit-d@1x.png" srcset="img/circuit-d@2x.png 2x" alt="Печатные платы">
-        </picture>
-      </div>
-      <a href="#anchor" class="intro__scroll">Скролл вниз</a>
-    </section>
+            <source media="(max-width: 767px)" srcset="img/circuit-m@1x.png 1x, img/circuit-m@2x.png 2x">
+            <source media="(max-width: 1023px)" srcset="img/circuit-t@1x.png 1x, img/circuit-t@2x.png 2x">
+            <img src="img/circuit-d@1x.png" srcset="img/circuit-d@2x.png 2x" alt="Печатные платы">
+          </picture>
+      </section>
+    </div>
+    <div class="page-header__scroll-wrapper page-container">
+      <a href="#anchor" class="page-header__scroll">Скролл вниз</a>
+    </div>
   </header>
   <main class="page-content">
-    <a href="#" name="anchor" class="visually-hidden" tabindex="-1"></a>
+    <a href="#" id="anchor" class="visually-hidden" tabindex="-1"></a>
     <section class="page-content__advantages advantages">
       <div class="advantages__wrapper page-container">
         <h2 class="visually-hidden">Наши преимущества:</h2>
@@ -301,7 +306,7 @@
       </div>
       <div class="feedback__field feedback__field--question feedback__field--popup">
         <label for="popup-question" class="visually-hidden">Ваш вопрос</label>
-        <textarea id="popup-question" placeholder="Ваш вопрос" name="popup-qiestion" required  tabindex="1"></textarea>
+        <textarea id="popup-question" placeholder="Ваш вопрос" name="popup-qiestion" required tabindex="1"></textarea>
       </div>
       <div class="feedback__field feedback__field--btn feedback__field--popup">
         <button type="submit" tabindex="1">Отправить</button>

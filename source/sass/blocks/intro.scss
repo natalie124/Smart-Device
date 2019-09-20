@@ -33,7 +33,7 @@
 .intro__text {
   width: 52%;
   padding: 0;
-  margin: 0 0 58px 0;
+  margin: 0 0 41px 0;
 
   font-size: 22px;
   line-height: 34px;
@@ -53,6 +53,8 @@
 }
 
 .intro__btn {
+  display: inline-block;
+
   padding: 18px 45px;
 
   font-family: $roboto-condensed;
@@ -86,38 +88,10 @@
 
 .intro img {
   position: absolute;
-  top: -323px;
-  right: -71px;
+  top: -204px;
+  right: -56px;
 
-  width: 50%;
-}
-
-.intro__scroll {
-  position: absolute;
-  bottom: -165px;
-  left: -17px;
-
-  font-family: $pt-mono;
-  font-size: 14px;
-  line-height: 15.7px;
-  color: $white;
-  text-decoration: none;
-
-  opacity: 0.5;
-  transform: rotate(-90deg);
-}
-
-.intro__scroll:hover,
-.intro__scroll:focus {
-  opacity: 1;
-
-  transition-duration: 0.3s;
-}
-
-.intro__scroll:active {
-  opacity: 0.2;
-
-  transition-duration: 0.3s;
+  width: 49%;
 }
 
 @media (max-width: $tablet-width) {
@@ -140,7 +114,7 @@
   .intro__text {
     width: 60%;
     min-width: 510px;
-    margin-bottom: 69px;
+    margin-bottom: 53px;
     padding-left: 20px;
 
     font-size: 18px;
@@ -163,15 +137,10 @@
   }
 
   .intro img {
-    position: absolute;
-    top: -387px;
-    right: -290px;
+    top: -193px;
+    right: -196px;
 
-    width: 89%;
-  }
-
-  .intro__scroll {
-    display: none;
+    width: 68%;
   }
 }
 
@@ -221,10 +190,10 @@
   }
 
   .intro img {
-    top: -450px;
-    right: -347px;
+    top: -313px;
+    right: -336px;
 
-    width: 625px;
+    width: 630px;
     height: auto;
   }
 }

@@ -364,10 +364,12 @@
   }
 
   .feedback__text {
+    padding-left: 7px;
     margin-bottom: 54px;
   }
 
   .feedback__field {
+    width: 283px;
     &--question {
       width: 100%;
     }
@@ -400,6 +402,7 @@
   }
 
   .feedback__text {
+    padding-left: 0;
     margin-bottom: 26px;
   }
 

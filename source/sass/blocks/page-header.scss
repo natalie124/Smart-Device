@@ -1,6 +1,9 @@
 .page-header {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   min-height: 878px;
   padding-bottom: 30px;
@@ -59,6 +62,40 @@
   opacity: 0.3;
 }
 
+.page-header__scroll-wrapper {
+  position: relative;
+  max-width: 1454px;
+}
+
+.page-header__scroll {
+  position: absolute;
+  bottom: 92px;
+  left: -18px;
+  margin-top: auto;
+
+  font-family: $pt-mono;
+  font-size: 14px;
+  line-height: 15.7px;
+  color: $white;
+  text-decoration: none;
+
+  opacity: 0.5;
+  transform: rotate(-90deg);
+}
+
+.page-headero__scroll:hover,
+.page-header__scroll:focus {
+  opacity: 1;
+
+  transition-duration: 0.3s;
+}
+
+.page-header__scroll:active {
+  opacity: 0.2;
+
+  transition-duration: 0.3s;
+}
+
 @media (max-width: $tablet-width) {
   .page-header {
     min-height: 686px;
@@ -68,6 +105,7 @@
   .page-header__info {
     max-width: none;
     padding: 20px 25px 0;
+    margin-bottom: 92px;
   }
 
   .page-header__nav {
@@ -78,6 +116,10 @@
 
   .page-header__nav-btn {
     margin-top: 17px;
+  }
+
+  .page-header__scroll {
+    display: none;
   }
 }
 
