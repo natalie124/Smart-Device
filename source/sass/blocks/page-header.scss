@@ -16,6 +16,10 @@
   overflow: hidden;
 }
 
+.page-header__content-wrapper {
+  min-height: 700px;
+}
+
 .page-header__info {
   display: flex;
   justify-content: space-between;
@@ -65,12 +69,13 @@
 .page-header__scroll-wrapper {
   position: relative;
   max-width: 1454px;
+  min-height: 93px;
 }
 
 .page-header__scroll {
   position: absolute;
-  bottom: 92px;
-  left: -18px;
+  left: 21px;
+  bottom: 45px;
   margin-top: auto;
 
   font-family: $pt-mono;
@@ -81,6 +86,7 @@
 
   opacity: 0.5;
   transform: rotate(-90deg);
+  transform-origin: left top;
 }
 
 .page-header__scroll:hover,
@@ -102,6 +108,10 @@
     margin-bottom: 54px;
   }
 
+  .page-header__content-wrapper {
+    min-height: 0;
+  }
+
   .page-header__info {
     max-width: none;
     padding: 20px 25px 0;
@@ -116,6 +126,10 @@
 
   .page-header__nav-btn {
     margin-top: 17px;
+  }
+
+  .page-header__scroll-wrapper {
+    min-height: 0;
   }
 
   .page-header__scroll {

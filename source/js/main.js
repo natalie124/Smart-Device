@@ -27,8 +27,7 @@
 
   var Code = {
     ENTER: 13,
-    ESC: 27,
-    TAB: 9
+    ESC: 27
   };
 
   var CROP_TEXT_SYMBOL = 200;
@@ -116,6 +115,7 @@
       }
     }
   }
+
   /**
    * добавляет переключение выпадающих списков
    * @param {string} selector css селектор элементов
@@ -125,13 +125,12 @@
   function addFooterDropdownToggle(selector, className) {
     if (selector && className) {
       var dropdownTitles = document.querySelectorAll(selector);
-      dropdownTitles.forEach(function (dropdownTitle) {
-        dropdownTitle.addEventListener('click', function () {
-          dropdownTitle.parentNode.classList.toggle(className);
-        });
-      });
+      for (var i = 0; i < dropdownTitles.length; i++) {
+        dropdownTitles[i].addEventListener('click', function(evt) {
+          evt.target.parentNode.classList.toggle(className);
+        })
+      }
     }
-
   }
   /**
    * обрезает текст до определенного числа символов и добавляет '..' в конце
