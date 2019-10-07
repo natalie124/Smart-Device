@@ -127,15 +127,15 @@
     if (selector && className) {
       var dropdownTitles = document.querySelectorAll(selector);
       for (var i = 0; i < dropdownTitles.length; i++) {
-        dropdownTitles[i].addEventListener('click', function(evt) {
+        dropdownTitles[i].addEventListener('click', function (evt) {
+          for (var j = 0; j < dropdownTitles.length; j++) {
+            if (dropdownTitles[j] !== evt.target) {
+              dropdownTitles[j].parentNode.classList.add(className);
+            }
+          }
           evt.target.parentNode.classList.toggle(className);
-        })
+        });
       }
-      // dropdownTitles.forEach(function (dropdownTitle) {
-      //   dropdownTitle.addEventListener('click', function () {
-      //     dropdownTitle.parentNode.classList.toggle(className);
-      //   });
-      // });
     }
 
   }
