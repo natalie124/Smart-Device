@@ -15,6 +15,7 @@
       CONTENT: '.page_content',
       CROP_TEXT: '.about-company__text-container p:last-child'
     },
+    BODY: 'body',
     OVERLAY: '.overlay',
     FEEDBACK_POPUP: '.feedback__popup',
     FEEDBACK_CLOSE: '.feedback__close'
@@ -22,7 +23,8 @@
 
   var ClassName = {
     CLOSE_FOOTER_DROPDOWN: 'page-footer__dropdown-close',
-    OPEN_POPUP: 'feedback__popup--open'
+    OPEN_POPUP: 'feedback__popup--open',
+    SCROLL_HIDDEN: 'scroll-hidden'
   };
 
   var Code = {
@@ -37,6 +39,7 @@
 
   var popup = document.querySelector(Selector.FEEDBACK_POPUP);
   var overlay = document.querySelector(Selector.OVERLAY);
+  var body = document.querySelector(Selector.BODY);
 
   /**
    * открывает окно
@@ -48,6 +51,7 @@
 
       popup.classList.add(ClassName.OPEN_POPUP);
       overlay.classList.add(ClassName.OPEN_POPUP);
+      body.classList.add(ClassName.SCROLL_HIDDEN);
       fieldName.focus();
       document.addEventListener('keydown', onEscPress);
     }
@@ -60,6 +64,7 @@
     if (popup && overlay && ClassName.OPEN_POPUP) {
       popup.classList.remove(ClassName.OPEN_POPUP);
       overlay.classList.remove(ClassName.OPEN_POPUP);
+      body.classList.remove(ClassName.SCROLL_HIDDEN);
       document.removeEventListener('keydown', onEscPress);
     }
   }
