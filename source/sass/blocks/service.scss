@@ -170,6 +170,10 @@
     margin-bottom: 46px;
   }
 
+  .service__item:not(:nth-child(3n)) {
+    margin-right: 0;
+  }
+
   .service__title {
     margin: 40px 0 0 45px;
 
