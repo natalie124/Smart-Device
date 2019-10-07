@@ -13,7 +13,7 @@
 
 .service__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
 
@@ -33,6 +33,10 @@
   padding: 0;
 
   overflow: hidden;
+}
+
+.service__item:not(:nth-child(3n)) {
+  margin-right: 2.56%;
 }
 
 .service__link {
