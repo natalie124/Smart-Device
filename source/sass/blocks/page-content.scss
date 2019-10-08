@@ -1,7 +1,9 @@
 .page-content {
   width: 100%;
+  padding-top: 109px;
 
   background: url("../img/content-bg@1x.png") no-repeat $white;
+  background-position: center -93%;
 }
 
 .page-content__advantages {
@@ -14,6 +16,8 @@
 
 @media (max-width: $tablet-width) {
   .page-content {
+    padding-top: 0;
+
     background-image: none;
   }
 
