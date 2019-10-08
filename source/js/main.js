@@ -18,7 +18,11 @@
     BODY: 'body',
     OVERLAY: '.overlay',
     FEEDBACK_POPUP: '.feedback__popup',
-    FEEDBACK_CLOSE: '.feedback__close'
+    FEEDBACK_CLOSE: '.feedback__close',
+    PHONE_INPUT: [
+      '#phone',
+      '#popup-phone'
+    ]
   };
 
   var ClassName = {
@@ -158,10 +162,48 @@
       textBox.textContent = crupText;
     }
   }
+  /**
+   * добавляет маски полям для ввода телефонных номеров
+   * @param {array} selectors массив с селекторами элементов
+   *
+   */
+  function createPhoneMasks(selectors) {
+    var maskOptions = {
+      mask: '+7(000)000-00-00'
+    };
+    /**
+    * добавляет маску полю для ввода телефонного номера
+    * @param {string} selector селектор элемента
+    *
+    */
+    function createPhoneMask(selector) {
+      if (selector) {
+        var element = document.querySelector(selector);
+
+        if (element) {
+          element.addEventListener('focus', function (evt) {
+            var phone = evt.target;
+
+            var maskPhone = new IMask(phone, maskOptions);
+
+            phone.addEventListener('focusout', function () {
+              if (maskPhone && phone.value === '') {
+                maskPhone._listeners.length = 0;
+              }
+            });
+          });
+        }
+      }
+    }
+    for (var i = 0; i < selectors.length; i++) {
+      createPhoneMask(selectors[i]);
+    }
+  }
 
   addСlasses(Selector.FOOTER.DROPDOWN, ClassName.CLOSE_FOOTER_DROPDOWN); // добавляет класс, скрывающий списки в подвале
   addFooterDropdownToggle(Selector.FOOTER.DROPDOWN_TITLE, ClassName.CLOSE_FOOTER_DROPDOWN); // добавляет переключение выпадающих списков  подвале
   truncatesText(Selector.MAIN.CROP_TEXT, CROP_TEXT_SYMBOL); // обрезает текст до 200 символов
+  createPhoneMasks(Selector.PHONE_INPUT); // добавляет маски полям с телефонными номерами
 
   popupOpenBtn.addEventListener('click', openPopup);
   popupOpenBtn.addEventListener('keydown', onPopupOpenBtnEnterPress);
