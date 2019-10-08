@@ -184,7 +184,7 @@
           element.addEventListener('focus', function (evt) {
             var phone = evt.target;
 
-            var maskPhone = new IMask(phone, maskOptions);
+            var maskPhone = new window.IMask(phone, maskOptions);
 
             phone.addEventListener('focusout', function () {
               if (maskPhone && phone.value === '') {
